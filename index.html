@@ -2,106 +2,173 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Private Call Service</title>
+  <title>Private Video Call Service - All India</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="India's trusted private video call service. Secure, easy, and fast. Join now via Telegram!">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
-      background-size: cover;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+      color: #fff;
       min-height: 100vh;
-    }
-    .overlay {
-      background: rgba(255,255,255,0.90);
-      min-height: 100vh;
-      padding-top: 50px;
-      padding-bottom: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
     .container {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 400px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background: rgba(0,0,0,0.5);
+      padding: 2.5rem 2rem;
+      border-radius: 18px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.18);
       text-align: center;
+      max-width: 390px;
+      width: 90%;
+      animation: fadeIn 1.2s;
     }
-    h2 {
-      color: #333;
+    @keyframes fadeIn {
+      0% { transform: translateY(40px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
     }
-    p {
-      font-size: 16px;
-      color: #555;
-      margin-bottom: 30px;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
-    .btn {
-      background-color: #0088cc;
-      color: white;
-      padding: 12px 25px;
-      font-size: 18px;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
+    .highlight {
+      color: #ffe484;
+      font-weight: 700;
+    }
+    .features {
+      margin: 1rem 0 1.8rem 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: left;
+      color: #f8f8f8;
+    }
+    .cta-btn {
       display: inline-block;
-      margin-bottom: 15px;
+      background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 0.9rem 2.2rem;
+      border: none;
+      border-radius: 34px;
+      box-shadow: 0 2px 12px rgba(238,9,121,0.19);
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.18s, box-shadow 0.18s;
+      margin-bottom: 0.8rem;
     }
-    .btn:hover {
-      background-color: #0077b3;
+    .cta-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 4px 24px rgba(255,106,0,0.18);
+      background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+    }
+    .telegram-link {
+      display: block;
+      margin-top: 0.8rem;
+      margin-bottom: 0.8rem;
+      color: #ffe484;
+      font-size: 1rem;
+      text-decoration: underline;
+      font-weight: 600;
+      word-break: break-all;
+    }
+    .secure {
+      font-size: 0.97rem;
+      color: #ffe484;
+      margin-top: 0.5rem;
+      font-style: italic;
     }
     .reviews {
-      max-width: 500px;
-      margin: 40px auto 0 auto;
-      background: rgba(255,255,255,0.95);
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.08);
-      padding: 20px 30px 10px 30px;
+      margin-top: 1.8rem;
     }
-    .review {
-      margin-bottom: 25px;
+    .reviews h3 {
+      color: #ffe484;
+      margin-bottom: 1rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .review-block {
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
       text-align: left;
+      font-size: 1rem;
+      color: #fff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
-    .review:last-child {
-      margin-bottom: 0;
+    .review-block strong {
+      color: #ffe484;
+      font-size: 1.02rem;
     }
-    .review-name {
-      font-weight: bold;
-      color: #009688;
-    }
-    .review-text {
-      font-style: italic;
-      color: #444;
-      margin-bottom: 6px;
-    }
-    .review-stars {
-      color: #FFD700;
-      font-size: 16px;
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.5rem 0.5rem;
+        max-width: 98vw;
+      }
+      h1 {
+        font-size: 1.3rem;
+      }
+      .cta-btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.3rem;
+      }
+      .telegram-link {
+        font-size: 0.92rem;
+      }
+      .reviews h3 {
+        font-size: 1rem;
+      }
+      .review-block {
+        font-size: 0.97rem;
+        padding: 0.7rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <div class="container">
-      <h2>Private Call Service for Males</h2>
-      <p>Talk privately, anytime. No judgment. Just connection.<br><br>Available 24x7 on Telegram.</p>
-      <a href="https://t.me/Bestvideocall_bot" class="btn" target="_blank">Join on Telegram</a>
+  <div class="container">
+    <h1>
+      <span class="highlight">Private Video Call Service</span> <br> All India
+    </h1>
+    <div class="features">
+      <ul style="padding-left: 1.1em; margin: 0;">
+        <li>100% Secure & Private</li>
+        <li>Fast Connection – No Waiting</li>
+        <li>Trusted by thousands</li>
+        <li>Easy Payment & Support</li>
+      </ul>
+    </div>
+    <a class="cta-btn" href="https://t.me/Bestvideocall_bot" target="_blank" rel="noopener">
+      🚀 Join Now on Telegram
+    </a>
+    <a class="telegram-link" href="https://t.me/Bestvideocall_bot" target="_blank" rel="noopener">
+      👉 Direct Telegram Channel: https://t.me/Bestvideocall_bot
+    </a>
+    <div class="secure">
+      Your privacy is our priority.<br> Service available across all India.
     </div>
     <div class="reviews">
-      <div class="review">
-        <div class="review-text">"Mujhe yahan apni feelings share karne ka mauka mila bina kisi judgment ke. Bahut helpful aur friendly service!"</div>
-        <div class="review-name">- Rohan, Delhi</div>
-        <div class="review-stars">★★★★★</div>
+      <h3>Real Users Say:</h3>
+      <div class="review-block">
+        <strong>Priya S. (Lucknow)</strong><br>
+        <span>“Service bahut hi secure aur fast hai! Main pehli baar use kiya aur experience amazing tha. Privacy ka pura dhyan rakhte hain. Highly recommended!”</span>
       </div>
-      <div class="review">
-        <div class="review-text">"Yeh service ne meri anxiety kam kar di. Har waqt support milta hai, aur baat karne wale genuine log hain."</div>
-        <div class="review-name">- Amit, Lucknow</div>
-        <div class="review-stars">★★★★★</div>
+      <div class="review-block">
+        <strong>Rahul M. (Mumbai)</strong><br>
+        <span>“Customer support bohot quick mil gaya, payment bhi easy tha. All India service sach mein genuine hai. Telegram pe connect karna simple tha!”</span>
       </div>
-      <div class="review">
-        <div class="review-text">"Main pehle hesitate karta tha, lekin ab har baar jab zarurat ho, yahan call kar leta hoon. 100% recommend karta hoon!"</div>
-        <div class="review-name">- Prakash, Mumbai</div>
-        <div class="review-stars">★★★★★</div>
+      <div class="review-block">
+        <strong>Anita D. (Delhi)</strong><br>
+        <span>“Main pehle hesitate kar rahi thi, but is service ne trust jeet liya. Video call quality super thi, privacy bilkul safe lagi. Thanks!”</span>
       </div>
     </div>
   </div>
