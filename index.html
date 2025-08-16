@@ -1,192 +1,305 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Private Video Call Service - All India</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="India's trusted private video call service. Secure, easy, and fast. Join now via Telegram!">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Montserrat', Arial, sans-serif;
-      background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Private Video Call Service – All India | Secure & Fast</title>
+    <meta
+      name="description"
+      content="India's trusted private video call service. Secure, fast, and available across India. Connect instantly via Telegram."
+    />
+    <link rel="canonical" href="https://your-domain.github.io/" /><!-- Open Graph / Twitter for richer previews -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Private Video Call Service – All India" />
+<meta
+  property="og:description"
+  content="Secure, fast, and private video calls. Join instantly on Telegram."
+/>
+<meta property="og:url" content="https://your-domain.github.io/" />
+<meta property="og:image" content="https://your-domain.github.io/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Fonts: performance friendly -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  :root {
+    --bg-start: #ff6a00;
+    --bg-end: #ee0979;
+    --accent: #ffe484;
+    --text: #ffffff;
+    --glass: rgba(0, 0, 0, 0.5);
+    --glass-2: rgba(255, 255, 255, 0.08);
+    --radius-lg: 18px;
+    --radius-md: 12px;
+    --shadow-lg: 0 4px 32px rgba(0, 0, 0, 0.18);
+    --shadow-md: 0 2px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Base */
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto,
+      Arial, sans-serif;
+    color: var(--text);
+    background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%)
+      fixed;
+    display: grid;
+    place-items: center;
+  }
+
+  /* Motion safety */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
     }
+  }
+
+  /* Layout */
+  .container {
+    background: var(--glass);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    max-width: 420px;
+    width: 92%;
+    animation: fadeIn 800ms ease both;
+  }
+
+  @keyframes fadeIn {
+    from {
+      transform: translateY(24px);
+      opacity: 0;
+    }
+    to {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  header h1 {
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+  }
+  .highlight {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .sub {
+    font-size: 0.95rem;
+    opacity: 0.95;
+    margin-bottom: 1rem;
+  }
+
+  .features {
+    text-align: left;
+    margin: 1rem 0 1.6rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f8f8f8;
+  }
+  .features ul {
+    margin: 0;
+    padding-left: 1.1em;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--bg-start) 0%, var(--bg-end) 100%);
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 34px;
+    box-shadow: 0 2px 12px rgba(238, 9, 121, 0.19);
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 180ms, box-shadow 180ms, filter 180ms;
+    margin-bottom: 0.75rem;
+  }
+  .cta-btn:hover,
+  .cta-btn:focus-visible {
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: 0 6px 28px rgba(255, 106, 0, 0.2);
+    filter: brightness(1.05);
+  }
+  .cta-btn:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+  }
+
+  .telegram-link {
+    display: block;
+    margin: 0.6rem 0 0.9rem 0;
+    color: var(--accent);
+    font-size: 0.98rem;
+    text-decoration: underline;
+    font-weight: 600;
+    word-break: break-word;
+  }
+
+  .secure {
+    font-size: 0.95rem;
+    color: var(--accent);
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+
+  .reviews {
+    margin-top: 1.6rem;
+    text-align: left;
+  }
+  .reviews h2 {
+    color: var(--accent);
+    margin: 0 0 0.8rem 0;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+  }
+  .review-block {
+    background: var(--glass-2);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.98rem;
+    color: #fff;
+    box-shadow: var(--shadow-md);
+  }
+  .review-block strong {
+    color: var(--accent);
+    font-size: 1rem;
+  }
+
+  footer {
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+    opacity: 0.9;
+  }
+  footer a {
+    color: #fff;
+  }
+
+  /* Small screens */
+  @media (max-width: 600px) {
     .container {
-      background: rgba(0,0,0,0.5);
-      padding: 2.5rem 2rem;
-      border-radius: 18px;
-      box-shadow: 0 4px 32px rgba(0,0,0,0.18);
-      text-align: center;
-      max-width: 390px;
-      width: 90%;
-      animation: fadeIn 1.2s;
-    }
-    @keyframes fadeIn {
-      0% { transform: translateY(40px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-    .highlight {
-      color: #ffe484;
-      font-weight: 700;
-    }
-    .features {
-      margin: 1rem 0 1.8rem 0;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      text-align: left;
-      color: #f8f8f8;
+      padding: 1.5rem 0.8rem;
+      max-width: 98vw;
     }
     .cta-btn {
-      display: inline-block;
-      background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
-      color: #fff;
-      font-size: 1.2rem;
-      font-weight: 700;
-      padding: 0.9rem 2.2rem;
-      border: none;
-      border-radius: 34px;
-      box-shadow: 0 2px 12px rgba(238,9,121,0.19);
-      cursor: pointer;
-      text-decoration: none;
-      transition: transform 0.18s, box-shadow 0.18s;
-      margin-bottom: 0.8rem;
-    }
-    .cta-btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 4px 24px rgba(255,106,0,0.18);
-      background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
-    }
-    .telegram-link {
-      display: block;
-      margin-top: 0.8rem;
-      margin-bottom: 0.8rem;
-      color: #ffe484;
       font-size: 1rem;
-      text-decoration: underline;
-      font-weight: 600;
-      word-break: break-all;
-    }
-    .secure {
-      font-size: 0.97rem;
-      color: #ffe484;
-      margin-top: 0.5rem;
-      font-style: italic;
-    }
-    .reviews {
-      margin-top: 1.8rem;
-    }
-    .reviews h3 {
-      color: #ffe484;
-      margin-bottom: 1rem;
-      font-size: 1.15rem;
-      font-weight: 700;
-      letter-spacing: 1px;
+      padding: 0.7rem 1.3rem;
     }
     .review-block {
-      background: rgba(255,255,255,0.08);
-      border-radius: 12px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      text-align: left;
-      font-size: 1rem;
-      color: #fff;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      font-size: 0.96rem;
+      padding: 0.8rem;
     }
-    .review-block strong {
-      color: #ffe484;
-      font-size: 1.02rem;
-    }
-    @media (max-width: 600px) {
-      .container {
-        padding: 1.5rem 0.5rem;
-        max-width: 98vw;
-      }
-      h1 {
-        font-size: 1.3rem;
-      }
-      .cta-btn {
-        font-size: 1rem;
-        padding: 0.7rem 1.3rem;
-      }
-      .telegram-link {
-        font-size: 0.92rem;
-      }
-      .reviews h3 {
-        font-size: 1rem;
-      }
-      .review-block {
-        font-size: 0.97rem;
-        padding: 0.7rem;
-      }
-    }<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '621612934033933');
-fbq('track', 'PageView');
+  }
+</style>
+
+<!-- JSON-LD: Service schema (update fields to match your real details) -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Private Video Call Service",
+    "areaServed": { "@type": "Country", "name": "India" },
+    "provider": {
+      "@type": "Organization",
+      "name": "Your Brand Name"
+    },
+    "serviceType": "Private video call",
+    "url": "https://your-domain.github.io/",
+    "sameAs": [
+      "https://t.me/Bestvideocall_bot"
+    ]
+  }
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=621612934033933&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>
-      <span class="highlight">Private Video Call Service</span> <br> All India
-    </h1>
-    <div class="features">
-      <ul style="padding-left: 1.1em; margin: 0;">
-        <li>100% Secure & Private</li>
-        <li>Fast Connection – No Waiting</li>
-        <li>Trusted by thousands</li>
-        <li>Easy Payment & Support</li>
-      </ul>
-    </div>
-    <a class="cta-btn" href="https://t.me/Bestvideocall_bot" target="_blank" rel="noopener">
-      🚀 Join Now on Telegram
-    </a>
-    <a class="telegram-link" href="https://t.me/Bestvideocall_bot" target="_blank" rel="noopener">
-      👉 Direct Telegram Channel: https://t.me/Bestvideocall_bot
-    </a>
-    <div class="secure">
-      Your privacy is our priority.<br> Service available across all India.
-    </div>
-    <div class="reviews">
-      <h3>Real Users Say:</h3>
-      <div class="review-block">
-        <strong>Priya S. (Lucknow)</strong><br>
-        <span>“Service bahut hi secure aur fast hai! Main pehli baar use kiya aur experience amazing tha. Privacy ka pura dhyan rakhte hain. Highly recommended!”</span>
-      </div>
-      <div class="review-block">
-        <strong>Rahul M. (Mumbai)</strong><br>
-        <span>“Customer support bohot quick mil gaya, payment bhi easy tha. All India service sach mein genuine hai. Telegram pe connect karna simple tha!”</span>
-      </div>
-      <div class="review-block">
-        <strong>Anita D. (Delhi)</strong><br>
-        <span>“Main pehle hesitate kar rahi thi, but is service ne trust jeet liya. Video call quality super thi, privacy bilkul safe lagi. Thanks!”</span>
-      </div>
-    </div>
-  </div>
-</body>
+
+  </head>
+  <body>
+    <main class="container" role="main">
+      <header>
+        <h1>
+          <span class="highlight">Private Video Call Service</span><br />All India
+        </h1>
+        <p class="sub" aria-live="polite">Secure • Fast • Private</p>
+      </header><section class="features" aria-label="Key features">
+    <ul>
+      <li>100% secure & private</li>
+      <li>Fast connection – no waiting</li>
+      <li>Easy payment & responsive support</li>
+      <li>Available across India</li>
+    </ul>
+  </section>
+
+  <p>
+    <a
+      class="cta-btn"
+      href="https://t.me/Bestvideocall_bot"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Join now on Telegram"
+    >🚀 Join Now on Telegram</a>
+  </p>
+
+  <a
+    class="telegram-link"
+    href="https://t.me/Bestvideocall_bot"
+    target="_blank"
+    rel="noopener noreferrer"
+  >👉 Direct Telegram Link: https://t.me/Bestvideocall_bot</a>
+
+  <p class="secure">Your privacy is our priority.</p>
+
+  <section class="reviews" aria-label="User reviews">
+    <h2>What users say</h2>
+    <!-- Only include real, verifiable reviews. Replace placeholders below. -->
+    <article class="review-block">
+      <p>
+        <strong>Priya S. (Lucknow)</strong><br />
+        “Service bahut hi secure aur fast hai! Pehli baar use kiya aur
+        experience great tha. Privacy ka pura dhyan rakhte hain.”
+      </p>
+    </article>
+    <article class="review-block">
+      <p>
+        <strong>Rahul M. (Mumbai)</strong><br />
+        “Customer support quick mila, payment easy tha. Telegram pe connect
+        karna simple tha!”
+      </p>
+    </article>
+    <article class="review-block">
+      <p>
+        <strong>Anita D. (Delhi)</strong><br />
+        “Video call quality super thi, privacy safe lagi. Thanks!”
+      </p>
+    </article>
+  </section>
+
+  <footer>
+    <p>
+      <a href="#" aria-label="Terms of Service">Terms</a> ·
+      <a href="#" aria-label="Privacy Policy">Privacy</a> ·
+      <a href="mailto:hello@example.com" aria-label="Email support">Support</a>
+    </p>
+  </footer>
+</main>
+
+  </body>
 </html>
